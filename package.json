@@ -1,16 +1,16 @@
 {
-  "name": "simplecrawler",
-  "description": "Very straightforward web crawler. Uses EventEmitter. Generates queue statistics and has a basic cache mechanism with extensible backend.",
-  "version": "0.7.0",
-  "homepage": "https://github.com/cgiffard/node-simplecrawler",
+  "name": "spiderhunt",
+  "description": "Very straightforward web crawler. Uses EventEmitter. Based on Simplecrawler but using a distributed queue system.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/donflopez/spiderhunt",
   "author": "Christopher Giffard <christopher.giffard@cgiffard.com>",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cgiffard/node-simplecrawler.git"
+    "url": "git+https://github.com/donflopez/spiderhunt.git"
   },
   "bugs": {
-    "url": "https://github.com/cgiffard/node-simplecrawler/issues"
+    "url": "https://github.com/donflopez/spiderhunt/issues"
   },
   "keywords": [
     "simple",
@@ -19,7 +19,13 @@
     "cache",
     "queue",
     "simplecrawler",
-    "eventemitter"
+    "eventemitter",
+    "spiderhunt",
+    "distributed",
+    "redis",
+    "rabbitmq",
+    "rabbit",
+    "scalable"
   ],
   "scripts": {
     "lint": "eslint example/ lib/ test/",
@@ -31,7 +37,9 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
+    "easy-rabbit": "^1.1.0",
     "iconv-lite": "^0.4.13",
+    "ioredis": "^2.0.1",
     "urijs": "^1.16.1"
   },
   "devDependencies": {
